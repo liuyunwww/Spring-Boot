@@ -1,0 +1,30 @@
+spring:
+  redis:
+    host: 192.168.186.139
+    port: 6379
+    shiro:
+      timeout: 1000
+  application:
+    name: application  #springboot服务名
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.186.139:3306/db_af?useSSL=false&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+
+server:
+  port: 8001   #项目端口号
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #开启mybatis-plus的日志
+  mapper-locations: classpath:/mapper/*.xml #  xml文件的位置
+
+fdfs:
+  soTimeout: 1500
+  connectTimeout: 600
+  thumbImage:             #缩略图生成参数
+    width: 150
+    height: 150
+  trackerList:            #TrackerList参数,支持多个
+
